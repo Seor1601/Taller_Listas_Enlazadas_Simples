@@ -1,5 +1,4 @@
 def menu():
-        lista = listaEnlazada()
 
     while True:
         print("\n=== Menu lista enlazada ===")
@@ -15,5 +14,16 @@ def menu():
         print("0. Salir")
 
         opcion = input("Seleccione una opcion: ")
-
+    
+    match opcion:
+        case "1":
+            print("insertar al inicion")
+            dato=input("Escriba el dato")
+            n=Node(dato)
+        case "2":
+            print("insertar al final")
+            dato=input("Escriba el dato")
+            n=Node(dato)
+        case "3":
+        
             
