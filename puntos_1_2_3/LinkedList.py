@@ -22,12 +22,6 @@ class LinkedList:
         while current is not None:
             print(current)
             current=current.next
-    
-    def mostrar(self):
-        while current is not None:
-            print(current, end= " --> ")
-            current=current.next
-        print("None")
         
         
     
