@@ -60,6 +60,35 @@ class LinkedList:
         current = None
         return
 
+    def ordenar(self):
+        
+
+      cambio = True
+      if self.head is not None and self.head.next is not None:
+        while cambio:
+            cambio = False
+            anterior = None
+            actual = self.head
+
+            while actual is not None and actual.next is not None:
+                next = actual.next
+
+                if actual.dato > next.dato:
+                    cambio = True
+
+                    actual.next = next.next
+                    next.next = actual
+
+                    if anterior is None:
+                        self.head = next
+                    else:
+                        anterior.next = next
+
+                    anterior = next
+                else:
+                    anterior = actual
+                    actual = actual.next
+
         
              
             
