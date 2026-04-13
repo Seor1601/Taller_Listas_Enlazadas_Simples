@@ -1,41 +1,48 @@
-from LinkedList import LinkedList
 
-
-
-match menu():
-    case 1:
-        pass
-    case 2:
-        pass
-    case 3:
-        pass
-    case 4:
-        target= int(input("Digite un elemento"))
-        LinkedList.display(target)
-    case 5:
-        LinkedList.delete_head()
-    case 6:
-        LinkedList.deleteXsearch()
-    
-     
+from listaEnlazada import LinkedList
 
 def menu():
-        lista = LinkedList()
+    lista = LinkedList()
 
-        while True:
-            print("\n=== Menu lista enlazada ===")
-            print("1. Insertar al inicio")
-            print("2. Insertar al final")
-            print("3. Mostrar lista")
-            print("4. Buscar elemento")
-            print("5. Eliminar primer elemento")
-            print("6. Eliminar por valor")
-            print("7. Tamaño de la lista")
-            print("8. Invertir lista")
-            print("9. Ordenar lista")
-            print("0. Salir")
+    while True:
+        print("\n=== Menu lista enlazada ===")
+        print("1. Insertar al inicio")
+        print("2. Insertar al final")
+        print("3. Mostrar lista")
+        print("7. Tamaño de la lista")
+        print("8. Invertir lista")
+        print("9. Ordenar lista")
+        print("0. Salir")
 
-            opcion = input("Seleccione una opcion: ")
-        return opcion
+        opcion = input("Seleccione una opcion: ")
+        
+        if opcion == "1":
+            print ("Insertar al inicio")
+            dato-input("Escriba el dato")
+            ll.insertar_inicio(dato)
+            
+        elif opcion == "2":
+            print ("Insertar al final
+            dato-input("Escriba el dato")
+            ll.insertar_final(dato)
+                   
+        elif opcion == "7":
+            print("Tamaño de la lista:", lista.tamano())
 
+        elif opcion == "8":
+            lista.invertir()
+            print("Lista invertida")
 
+        elif opcion == "9":
+            lista.ordenar()
+            print("Lista ordenada")
+
+        elif opcion == "0":
+            print("Saliendo...")
+            break
+
+        else:
+            print("Opcion invalida")
+
+menu()
+           
