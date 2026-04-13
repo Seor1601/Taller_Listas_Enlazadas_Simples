@@ -11,7 +11,7 @@ class LinkedList:
         while current is not None:
             print(current.data, end= "-->")
             current = current.next
-            print("None")
+        print("None")
 
     def search(self, target):
         current = self.head
@@ -28,18 +28,23 @@ class LinkedList:
         if self.head is not None:
             current= self.head
             while current.next is not None:
-                self.head=current.next
+                current.data=current.next.data
             current=None
         return
     
     def deleteXsearch(self, data):
-        current = self.head.data
+        current = self.head
         while current is not None:
           if current.data == data:
-            while current.next is not None:
-                current=current.next
-            current = current.next
             current=None
+            while current.next is not None:
+                current.data=current.next.data
+                current = current.next
+        return
+
+
+
+          
           
           
         
@@ -55,8 +60,14 @@ class LinkedList:
             current = None
         while current.next is not None:
             current = current.next
-        current.next = None
+        current = None
         return
+
+        
+             
+            
+
+        
 
         
              
