@@ -8,7 +8,7 @@ class LinkedList:
 
         while actual is not None:
             contador += 1
-            actual = actual.siguiente
+            actual = actual.next
 
         return contador
 
@@ -17,15 +17,15 @@ class LinkedList:
         actual = self.primero
 
         while actual is not None:
-            siguiente_temporal = actual.siguiente
-            actual.siguiente = anterior
+            next_temporal = actual.next
+            actual.next = anterior
             anterior = actual
-            actual = siguiente_temporal
+            actual = next_temporal
 
         self.primero = anterior
 
     def ordenar(self):
-        if self.primero is None or self.primero.siguiente is None:
+        if self.primero is None or self.primero.next is None:
             return
 
         cambio = True
@@ -35,21 +35,21 @@ class LinkedList:
             anterior = None
             actual = self.primero
 
-            while actual is not None and actual.siguiente is not None:
-                siguiente = actual.siguiente
+            while actual is not None and actual.next is not None:
+                next = actual.next
 
-                if actual.dato > siguiente.dato:
+                if actual.dato > next.dato:
                     cambio = True
 
-                    actual.siguiente = siguiente.siguiente
-                    siguiente.siguiente = actual
+                    actual.next = next.next
+                    next.next = actual
 
                     if anterior is None:
-                        self.primero = siguiente
+                        self.primero = next
                     else:
-                        anterior.siguiente = siguiente
+                        anterior.next = next
 
-                    anterior = siguiente
+                    anterior = next
                 else:
                     anterior = actual
-                    actual = actual.siguiente
+                    actual = actual.next
