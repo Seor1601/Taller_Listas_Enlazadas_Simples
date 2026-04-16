@@ -1,4 +1,4 @@
-class LinkedList:
+class LinkedLists:
     def __init__(self):
         self.primero = None
 
@@ -36,20 +36,20 @@ class LinkedList:
             actual = self.primero
 
             while actual is not None and actual.next is not None:
-                next = actual.next
+                siguiente = actual.next
 
-                if actual.dato > next.dato:
+                if actual.data > siguiente.data:
                     cambio = True
 
-                    actual.next = next.next
-                    next.next = actual
+                    actual.next = siguiente.next
+                    siguiente.next = actual
 
                     if anterior is None:
-                        self.primero = next
+                        self.primero = siguiente
                     else:
-                        anterior.next = next
+                        anterior.next = siguiente
 
-                    anterior = next
+                    anterior = siguiente
                 else:
                     anterior = actual
                     actual = actual.next
